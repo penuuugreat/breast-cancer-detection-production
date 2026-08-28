@@ -10,6 +10,6 @@ services:
     healthCheckPath: /health
     envVars:
       - key: ALLOWED_ORIGINS
-        value: https://breast-cancer-detection-production-ixe3m29yg.vercel.app
+        sync: false
       - key: PYTHON_VERSION
         value: 3.11.9
