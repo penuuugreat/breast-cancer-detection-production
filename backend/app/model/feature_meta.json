@@ -1,0 +1,248 @@
+{
+  "features": [
+    {
+      "name": "radius_mean",
+      "label": "Radius Mean",
+      "min": 6.981,
+      "max": 28.11,
+      "mean": 14.12729,
+      "step": 0.105645
+    },
+    {
+      "name": "texture_mean",
+      "label": "Texture Mean",
+      "min": 9.71,
+      "max": 39.28,
+      "mean": 19.28965,
+      "step": 0.14785
+    },
+    {
+      "name": "perimeter_mean",
+      "label": "Perimeter Mean",
+      "min": 43.79,
+      "max": 188.5,
+      "mean": 91.96903,
+      "step": 0.72355
+    },
+    {
+      "name": "area_mean",
+      "label": "Area Mean",
+      "min": 143.5,
+      "max": 2501.0,
+      "mean": 654.8891,
+      "step": 11.7875
+    },
+    {
+      "name": "smoothness_mean",
+      "label": "Smoothness Mean",
+      "min": 0.05263,
+      "max": 0.1634,
+      "mean": 0.09636,
+      "step": 0.000554
+    },
+    {
+      "name": "compactness_mean",
+      "label": "Compactness Mean",
+      "min": 0.01938,
+      "max": 0.3454,
+      "mean": 0.10434,
+      "step": 0.00163
+    },
+    {
+      "name": "concavity_mean",
+      "label": "Concavity Mean",
+      "min": 0.0,
+      "max": 0.4268,
+      "mean": 0.0888,
+      "step": 0.002134
+    },
+    {
+      "name": "concave points_mean",
+      "label": "Concave Points Mean",
+      "min": 0.0,
+      "max": 0.2012,
+      "mean": 0.04892,
+      "step": 0.001006
+    },
+    {
+      "name": "symmetry_mean",
+      "label": "Symmetry Mean",
+      "min": 0.106,
+      "max": 0.304,
+      "mean": 0.18116,
+      "step": 0.00099
+    },
+    {
+      "name": "fractal_dimension_mean",
+      "label": "Fractal Dimension Mean",
+      "min": 0.04996,
+      "max": 0.09744,
+      "mean": 0.0628,
+      "step": 0.000237
+    },
+    {
+      "name": "radius_se",
+      "label": "Radius Se",
+      "min": 0.1115,
+      "max": 2.873,
+      "mean": 0.40517,
+      "step": 0.013808
+    },
+    {
+      "name": "texture_se",
+      "label": "Texture Se",
+      "min": 0.3602,
+      "max": 4.885,
+      "mean": 1.21685,
+      "step": 0.022624
+    },
+    {
+      "name": "perimeter_se",
+      "label": "Perimeter Se",
+      "min": 0.757,
+      "max": 21.98,
+      "mean": 2.86606,
+      "step": 0.106115
+    },
+    {
+      "name": "area_se",
+      "label": "Area Se",
+      "min": 6.802,
+      "max": 542.2,
+      "mean": 40.33708,
+      "step": 2.67699
+    },
+    {
+      "name": "smoothness_se",
+      "label": "Smoothness Se",
+      "min": 0.00171,
+      "max": 0.03113,
+      "mean": 0.00704,
+      "step": 0.000147
+    },
+    {
+      "name": "compactness_se",
+      "label": "Compactness Se",
+      "min": 0.00225,
+      "max": 0.1354,
+      "mean": 0.02548,
+      "step": 0.000666
+    },
+    {
+      "name": "concavity_se",
+      "label": "Concavity Se",
+      "min": 0.0,
+      "max": 0.396,
+      "mean": 0.03189,
+      "step": 0.00198
+    },
+    {
+      "name": "concave points_se",
+      "label": "Concave Points Se",
+      "min": 0.0,
+      "max": 0.05279,
+      "mean": 0.0118,
+      "step": 0.000264
+    },
+    {
+      "name": "symmetry_se",
+      "label": "Symmetry Se",
+      "min": 0.00788,
+      "max": 0.07895,
+      "mean": 0.02054,
+      "step": 0.000355
+    },
+    {
+      "name": "fractal_dimension_se",
+      "label": "Fractal Dimension Se",
+      "min": 0.00089,
+      "max": 0.02984,
+      "mean": 0.00379,
+      "step": 0.000145
+    },
+    {
+      "name": "radius_worst",
+      "label": "Radius Worst",
+      "min": 7.93,
+      "max": 36.04,
+      "mean": 16.26919,
+      "step": 0.14055
+    },
+    {
+      "name": "texture_worst",
+      "label": "Texture Worst",
+      "min": 12.02,
+      "max": 49.54,
+      "mean": 25.67722,
+      "step": 0.1876
+    },
+    {
+      "name": "perimeter_worst",
+      "label": "Perimeter Worst",
+      "min": 50.41,
+      "max": 251.2,
+      "mean": 107.26121,
+      "step": 1.00395
+    },
+    {
+      "name": "area_worst",
+      "label": "Area Worst",
+      "min": 185.2,
+      "max": 4254.0,
+      "mean": 880.58313,
+      "step": 20.344
+    },
+    {
+      "name": "smoothness_worst",
+      "label": "Smoothness Worst",
+      "min": 0.07117,
+      "max": 0.2226,
+      "mean": 0.13237,
+      "step": 0.000757
+    },
+    {
+      "name": "compactness_worst",
+      "label": "Compactness Worst",
+      "min": 0.02729,
+      "max": 1.058,
+      "mean": 0.25427,
+      "step": 0.005154
+    },
+    {
+      "name": "concavity_worst",
+      "label": "Concavity Worst",
+      "min": 0.0,
+      "max": 1.252,
+      "mean": 0.27219,
+      "step": 0.00626
+    },
+    {
+      "name": "concave points_worst",
+      "label": "Concave Points Worst",
+      "min": 0.0,
+      "max": 0.291,
+      "mean": 0.11461,
+      "step": 0.001455
+    },
+    {
+      "name": "symmetry_worst",
+      "label": "Symmetry Worst",
+      "min": 0.1565,
+      "max": 0.6638,
+      "mean": 0.29008,
+      "step": 0.002536
+    },
+    {
+      "name": "fractal_dimension_worst",
+      "label": "Fractal Dimension Worst",
+      "min": 0.05504,
+      "max": 0.2075,
+      "mean": 0.08395,
+      "step": 0.000762
+    }
+  ],
+  "metrics": {
+    "test_accuracy": 0.9649,
+    "test_roc_auc": 0.9974
+  }
+}

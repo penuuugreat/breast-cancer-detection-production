@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: breast-cancer-detection-api
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend.vercel.app
+      - key: PYTHON_VERSION
+        value: 3.11.9
