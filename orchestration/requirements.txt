@@ -1,0 +1,3 @@
+-r ../backend/requirements.txt
+dagster==1.13.26
+dagster-webserver==1.13.26
