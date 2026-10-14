@@ -1,0 +1,47 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      # Must match the URL you open the frontend at (CORS).
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:5173}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Baked in at build time; must be reachable from the *browser*,
+        # not from inside the compose network.
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8000}
+    ports:
+      - "5173:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Optional: docker compose --profile orchestration up --build
+  orchestrator:
+    profiles: ["orchestration"]
+    build:
+      context: .
+      dockerfile: orchestration/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      MIN_AUC: ${MIN_AUC:-0.99}
+    volumes:
+      - ./backend/app/model:/app/backend/app/model   # shared with the API
+      - dagster_home:/dagster_home                    # run history + schedules
+    restart: unless-stopped
+
+volumes:
+  dagster_home:
