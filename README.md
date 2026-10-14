@@ -238,4 +238,4 @@ The project also includes a root [docker-compose.yml](docker-compose.yml) for lo
 
 ## License
 
-This project is provided for learning and demonstration purposes. Add an explicit license if you plan to distribute it publicly.
+This project is provided for learning and demonstration purposes.
