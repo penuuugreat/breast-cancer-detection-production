@@ -35,7 +35,11 @@ FEATURES = [
 ]
 
 
-def main():
+def main(out_dir=None):
+    """Train and save artifacts to out_dir (default: app/model). Returns metrics."""
+    out = Path(out_dir) if out_dir else MODEL_PATH.parent
+    out.mkdir(parents=True, exist_ok=True)
+    model_path, meta_path = out / MODEL_PATH.name, out / META_PATH.name
     df = pd.read_csv(DATA_PATH)
     df = df.drop(columns=[c for c in ["id", "Unnamed: 32"] if c in df.columns])
 
@@ -68,7 +72,7 @@ def main():
 
     # Refit on all data for the shipped artifact
     pipeline.fit(X, y)
-    joblib.dump(pipeline, MODEL_PATH)
+    joblib.dump(pipeline, model_path)
 
     # Metadata used to build slider ranges + defaults in the frontend
     meta = {
@@ -85,9 +89,10 @@ def main():
         ],
         "metrics": {"test_accuracy": round(acc, 4), "test_roc_auc": round(auc, 4)},
     }
-    META_PATH.write_text(json.dumps(meta, indent=2))
-    print(f"Saved model -> {MODEL_PATH}")
-    print(f"Saved metadata -> {META_PATH}")
+    meta_path.write_text(json.dumps(meta, indent=2))
+    print(f"Saved model -> {model_path}")
+    print(f"Saved metadata -> {meta_path}")
+    return {"test_accuracy": float(acc), "test_roc_auc": float(auc)}
 
 
 if __name__ == "__main__":
