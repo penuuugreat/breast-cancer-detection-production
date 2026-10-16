@@ -6,13 +6,13 @@ update in real time. Trained on the Wisconsin Diagnostic Breast Cancer
 dataset — **96.5 % test accuracy · 0.997 ROC AUC**.
 
 <p align="center">
-  <img src="docs/images/app-ui.jpg" alt="Breast Cancer Risk Estimator UI: 30 sliders, live malignancy gauge, 96.5% accuracy and 0.997 ROC AUC" width="820">
+  <img src="app-ui.jpg" alt="Breast Cancer Risk Estimator UI: 30 sliders, live malignancy gauge, 96.5% accuracy and 0.997 ROC AUC" width="820">
   <br>
   <em>The app: adjust 30 nuclear measurements and watch the classifier's read update live.</em>
 </p>
 
 <p align="center">
-  <img src="docs/images/dagster-retrain-run.png" alt="Dagster retrain job: candidate_model passed its AUC quality gate and live_model was promoted" width="720">
+  <img src="dagster-retrain-run.png" alt="Dagster retrain job: candidate_model passed its AUC quality gate and live_model was promoted" width="720">
   <br>
   <em>Automated retraining (Dagster): train → AUC quality gate → promote. Both assets materialized, gate 1/1 passed.</em>
 </p>
@@ -83,7 +83,7 @@ and no more than 0.005 below the live model) → `live_model` (atomic swap into
 model.
 
 <p align="center">
-  <img src="docs/images/dagster-pipeline-graph.png" alt="Dagster pipeline graph: candidate_model feeds auc_gate, which guards live_model" width="420">
+  <img src="dagster-pipeline-graph.png" alt="Dagster pipeline graph: candidate_model feeds auc_gate, which guards live_model" width="420">
 </p>
 
 ⚠️ `data.csv` is a static dataset with a fixed seed, so retraining reproduces
